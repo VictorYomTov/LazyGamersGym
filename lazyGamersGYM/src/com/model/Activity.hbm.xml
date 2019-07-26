@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="com.model.Activity" table="activities"
+		catalog="sql7299824">
+
+		<id name="activityId">
+			<column name="activityId" sql-type="BIGINT" not-null="true" />
+			<generator class="increment"></generator>
+		</id>
+		<property name="aerobic">
+			<column name="aerobic" sql-type="varchar(1024)" length="1024"
+				not-null="false" />
+		</property>
+		<property name="anaerobic">
+			<column name="anaerobic" sql-type="varchar(1024)"
+				length="1024" not-null="false" />
+		</property>
+		<property name="sets">
+			<column name="sets" sql-type="INTEGER" length="1024" />
+		</property>
+		<property name="reps">
+			<column name="reps" sql-type="INTEGER" />
+		</property>
+		<property name="time">
+			<column name="time" sql-type="INTEGER" />
+		</property>
+		<property name="userId">
+			<column name="userId" sql-type="BIGINT" not-null="true" />
+		</property>
+
+	</class>
+</hibernate-mapping>
